@@ -8,9 +8,11 @@ function mouse_AC(){
 	boxbtn.on("mouseover",function(){
 		$(".mouseimg").removeClass("on");
 		$(this).children(".mouseimg").addClass("on");
+		$(this).parents("li").addClass("on");
 	});
 	boxbtn.on("mouseleave",function(){
 		$(".mouseimg").removeClass("on");
+		$(this).parents("li").removeClass("on");
 	});
 	$(document).mousemove(function(e){
 		$('.mouseimg').css("top", e.pageY);
