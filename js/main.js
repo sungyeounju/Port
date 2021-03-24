@@ -1,4 +1,5 @@
 $(function(){
+	menu_AC(); //nav
 	typing_AC(); //메인타이핑
 	cont05_AC(); //jambtn ov
 });
@@ -14,6 +15,26 @@ setTimeout(function() {
 setTimeout(function() {
 	$(".cont02").fadeIn(500);
 }, 5000);
+
+//nav
+function menu_AC(){
+	var menubox = $(".nav .menubox");
+	var menubtn = $(".nav .menubox .menu");
+	var menua = $(".nav .menubox .menuitem ul li a");
+
+	menubtn.on("click", function(){
+		if(!menubox.hasClass("on")){
+			menubox.addClass("on");
+		}else{
+			menubox.removeClass("on");
+		}
+	});
+
+	menua.on("click", function(){
+		console.log("Sss");
+		menubox.removeClass("on");
+	})
+}
 
 //메인타이핑
 function typing_AC(){

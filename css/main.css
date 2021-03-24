@@ -1,16 +1,35 @@
 @charset "utf-8";
 
 body{overflow-y: hidden;}
-.header{position: fixed;left:calc(50% - 25px);top:50px;width:50px;animation:nata 1s 4s linear forwards;opacity: 0;}
-.header a{color:#0e111c;font-size:30px;font-weight: 900;}
+.header{position: fixed;left: calc(50% - 65px);top:3%;width: 125px;animation:nata 1s 4s linear forwards;opacity: 0;z-index: 99;}
+.header a{color:#0e111c;font-size: 25px;font-weight: 900;letter-spacing: -1px;}
 .nav{position: fixed;animation:nata 1s 4s linear forwards;opacity: 0;z-index: 999;}
-.nav .menu{position:fixed;left:100px;top:50px;display:block;width: 50px;height: 30px;text-align: center;font-size:0;}
-.nav .menu span{display: inline-block;width:4px;height:30px;transform: skew(-20deg);background:#0e111c;}
-.nav .menu:before{display: inline-block;position: absolute;left: 10px;top:0;width:4px;height:30px;transform: skew(-20deg);background:#0e111c;content:'';}
-.nav .menu:after{display: inline-block;position: absolute;right: 10px;top:0;width:4px;height:30px;transform: skew(-20deg);background:#0e111c;content:'';}
-.nav .file{position:fixed;left:100px;bottom:100px;display: inline-block;font-size:0;}
-.nav .file:after{overflow:hidden;position: absolute;left: 70px;top: 13px;width:0;content: '이력서 보기';font-size:20px;color:#0e111c;white-space: nowrap;transition: 0.3s;}
-.nav .file span{display:inline-block; width:50px;height:50px;background: url(/images/notion.png)center no-repeat;}
+.nav .menubox{position:fixed;left:5%;top:50px;z-index: 1;}
+.nav .menubox .menu{position: relative;z-index: 11; display:block;width: 50px;height: 30px;text-align: center;font-size:0;}
+.nav .menubox .menu span{opacity:1; display: inline-block;width:4px;height:30px;transform: skew(-20deg);background:#0e111c;transition: 0.5s;}
+.nav .menubox .menu:before{display: inline-block;position: absolute;left: 10px;top:0;width:4px;height:30px;transform: skew(-20deg);background:#0e111c;content:'';transition: 0.5s;}
+.nav .menubox .menu:after{display: inline-block;position: absolute;right: 10px;top:0;width:4px;height:30px;transform: skew(-20deg);background:#0e111c;content:'';transition: 0.5s;}
+.nav .menubox .menuitem{position: fixed;left: -100%;top: 0;width:100%;height:100%;background: linear-gradient(90deg,#090c17 30%,transparent);z-index: 10;transition: 0.5s;}
+.nav .menubox .menuitem .contbox{position: absolute;left: 5%;bottom:5%;}
+.nav .menubox .menuitem .contbox .name{display:block;color: #9398ab;font-size: 15px;}
+.nav .menubox .menuitem .contbox .ename{display:block;color: #858ca7;font-size: 14px;font-weight: 300;}
+.nav .menubox .menuitem .contbox .slo{display:block;margin:10px 0;color: #858ca7;font-size: 13px;font-weight: 200;}
+.nav .menubox .menuitem ul{position:absolute;left:20%;bottom:calc(50% - 140px);}
+.nav .menubox .menuitem ul li a{position: relative; display:block;color:transparent;-webkit-text-stroke:1px #fff;font-size:60px;font-weight: 900;}
+.nav .menubox .menuitem ul li a:after{overflow: hidden; position: absolute;left:0;top:0;width:0;color:#fff;transition:0.5s;}
+.nav .menubox .menuitem ul li:nth-child(1) a:after{content: 'SKILL';}
+.nav .menubox .menuitem ul li:nth-child(2) a:after{content: 'PROJECT';}
+.nav .menubox .menuitem ul li:nth-child(3) a:after{content: 'WORK';}
+.nav .menubox .menuitem ul li:nth-child(4) a:after{content: 'CONTACT';}
+.nav .menubox .menuitem ul li a:hover:after,
+.nav .menubox .menuitem ul li a:focus:after{width:100%;}
+.nav .menubox.on .menu span{opacity:0;}
+.nav .menubox.on .menu:before{left:27px;background:#fff;transform: skew(-30deg);}
+.nav .menubox.on .menu:after{right:18px;background:#fff;transform: skew(30deg);}
+.nav .menubox.on .menuitem{left:0;}
+.nav .file{position:fixed;left:5%;bottom:7%;display: inline-block;font-size:0;}
+.nav .file:after{overflow:hidden;position: absolute;left: 51px;top: 10px;width:0;content: '이력서 보기';font-size: 16px;color:#0e111c;white-space: nowrap;transition: 0.3s;font-weight: 600;letter-spacing: -1px;}
+.nav .file span{display:inline-block;width: 40px;height: 40px;background: url(/images/notion.png)center no-repeat;background-size: 100%;}
 .nav .file:hover:after,
 .nav .file:focus:after{width:200%;}
 

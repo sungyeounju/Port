@@ -14,10 +14,10 @@ function mouse_AC(){
 		$(".mouseimg").removeClass("on");
 		$(this).parents("li").removeClass("on");
 	});
-	$(document).mousemove(function(e){
-		$('.mouseimg').css("top", e.pageY);
-		$('.mouseimg').css("left", e.pageX);
-	});
+	// $(document).mousemove(function(e){
+	// 	$('.mouseimg').css("top", e.pageY);
+	// 	$('.mouseimg').css("left", e.pageX);
+	// });
 }
 
 
