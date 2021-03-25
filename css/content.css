@@ -1,5 +1,13 @@
 @charset "utf-8";
-     
+ 
+.qicon{position: fixed;left: 5%;top: 73px;letter-spacing: -1px;text-align: center;z-index: 999;}
+.qicon a{display: inline-block;color:#000;}
+.qicon .icon{display: inline-block;width: 70px;height: 70px;background:url(/images/mimo.png)center no-repeat;background-size: 100%;}
+.qicon .qtxt{position:relative; display:block;width:100px;margin-top: -7px;font-size: 18px;font-weight: 700;}
+.qicon .qtxt:after{opacity:0;position:absolute;left:0;top:2px;width:100%;height:100%;background:#fff;content:'되돌아가기';font-size:16px; color:#000;transform: scale(0.5);transition: 0.5s;}
+.qicon a:hover .qtxt:after,
+.qicon a:focus .qtxt:after{opacity:1;transform: scale(1);}
+
 .project ul li{position:relative;}
 .project ul li:before{opacity:0; display: inline-block;position: absolute;left:0;top:0;width:100%;height:100%;content:'';z-index: -1;background-size:cover;background-position: center; transition:0.5s;}
 .project ul li a{display: flex;max-width:1200px;margin:0 auto; padding: 70px 0;color:#000;justify-content: space-between;width: 100%;align-items: flex-end;border-bottom:3px solid #000;}
@@ -20,13 +28,14 @@
 .project ul li:nth-child(3):before{background-image: url(/images/content/pro_img03.jpg);}
 .project ul li:nth-child(4):before{background-image: url(/images/content/pro_img04.jpg);}
 .project ul li:nth-child(5):before{background-image: url(/images/content/pro_img05.jpg);}
-.project ul li:nth-child(6):before{background-image: url(/images/content/pro_img06.jpg);}
-.project ul li:nth-child(7):before{background-image: url(/images/content/pro_img07.jpg);}
-.project ul li:nth-child(8):before{background-image: url(/images/content/pro_img11.jpg);}
+.project ul li:nth-child(6):before{background-image: url(/images/content/pro_img14.jpg);}
+.project ul li:nth-child(7):before{background-image: url(/images/content/pro_img06.jpg);}
+.project ul li:nth-child(8):before{background-image: url(/images/content/pro_img07.jpg);}
 .project ul li:nth-child(9):before{background-image: url(/images/content/pro_img12.jpg);}
-.project ul li:nth-child(10):before{background-image: url(/images/content/pro_img08.jpg);}
-.project ul li:nth-child(11):before{background-image: url(/images/content/pro_img13.jpg);}
-.project ul li:nth-child(12):before{background-image: url(/images/content/pro_img09.jpg);}
-.project ul li:nth-child(13):before{background-image: url(/images/content/pro_img10.jpg);}
+.project ul li:nth-child(10):before{background-image: url(/images/content/pro_img11.jpg);}
+.project ul li:nth-child(11):before{background-image: url(/images/content/pro_img08.jpg);}
+.project ul li:nth-child(12):before{background-image: url(/images/content/pro_img13.jpg);}
+.project ul li:nth-child(13):before{background-image: url(/images/content/pro_img09.jpg);}
+.project ul li:nth-child(14):before{background-image: url(/images/content/pro_img10.jpg);}
 
 

@@ -50,14 +50,27 @@ body{overflow-y: hidden;}
 .cont02 .move-text .txtwrap ul li:last-child{animation:none;}
 .cont02 .move-text .txtcont{display:none;}
 .cont02 .move-text .txtcont .pub{font-size: 40px;display: block;margin: 10px 0;font-weight: 900;}
-.cont02 .move-text .txtcont p{font-weight: 300;font-size: 18px;line-height: 1.5;letter-spacing: -1px;}
+.cont02 .move-text .txtcont p{font-weight: 300;font-size: 17px;line-height: 1.5;letter-spacing: -1px;}
+.cont02 .move-text .txtcont ul{margin: 25px 0;}
+.cont02 .move-text .txtcont ul li{overflow: hidden;width:0; margin: 10px 0;white-space:nowrap;font-size: 18px;font-weight: 300;letter-spacing: -1px;}
+.cont02 .move-text .txtcont ul li:nth-child(1){animation:txtli 0.5s 0.3s linear forwards;}
+.cont02 .move-text .txtcont ul li:nth-child(2){animation:txtli 0.5s 0.4s linear forwards;}
+.cont02 .move-text .txtcont ul li:nth-child(3){animation:txtli 0.5s 0.5s linear forwards;}
+.cont02 .move-text .txtcont ul li:nth-child(4){animation:txtli 0.5s 0.6s linear forwards;}
+@keyframes txtli{
+    0%{width:0;}
+    100%{width:100%;}
+}
+.cont02 .move-text .txtcont ul li span{display:inline-block;position: relative;font-weight: 700;}
+.cont02 .move-text .txtcont ul li span:before{display:inline-block;position: absolute;left:0;bottom: -4px;height:2px;width:100%;background:#000;content:'';}
+.cont02 .move-text .txtcont ul li .bx{margin-right:5px;font-size: 30px;position: relative;top: 6px;}
 
 .cont02.on .move-text{display: block;max-width: 1200px;margin: 0 auto;}
 /* .cont02.on .move-text .txtwrap{opacity:0;display: none;} */
 .cont02.on .move-text .txtcont{display: inline-block;padding-top:calc(50% - 150px);}
 
 .cont03{display:flex;align-items: center;}
-.cont03 .txtwrap{width:100%;margin-left: 80%;}
+.cont03 .txtwrap{width:100%;margin-left: 50%;}
 .cont03 .txtwrap .skilltit{display:block;margin-bottom:30px;font-size:40px;font-weight: 900;}
 .cont03 .txtwrap ul li{padding-left:5px;margin: 16px 0;font-size: 25px;font-weight: 200;}
 .cont03 .txtwrap ul li strong{display:inline-block;margin-right: 10px;}
